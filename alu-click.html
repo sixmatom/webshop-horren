@@ -11,6 +11,7 @@
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/data.js"></script>
+    <script src="assets/js/components/buttons.js"></script>
     <script src="/assets/js/components/product.js"></script>
     <script src="/assets/js/components/cart.js"></script>
 
@@ -103,7 +104,7 @@
                     Standaard kleuren zijn:
                     <section class="button">
                         <div class="btn-group" v-for="color in colors">
-                            <product :color_data="color"></product>
+                            <buttonstyle :color_data="color"></buttonstyle>
 
                         </div>
 

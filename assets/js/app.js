@@ -4,6 +4,7 @@ let app = new Vue({
     data: {
         appName: 'buttons',
         products: [],
+        buttons: [],
         showHeader: true,
     },
 

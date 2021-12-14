@@ -6,7 +6,6 @@ Vue.component('product', {
     },
 
     props: {
-        color_data: {},
         screen_data: {},
     },
 
@@ -17,16 +16,24 @@ Vue.component('product', {
     },
     
     template:`
-    <div class="btn-group">
-    <button :style ="{'background-color':[color_data.bGC]}"style="color:darkgreen" @click="addToCart([color_data.id],console.log([color_data.id]))" >{{color_data.name}}</button>
-        
-    </div>
-    <div class="card">
-    <img :src="imagePath + screen_data.path" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{ screen_data.name }}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        
-    </div>
-</div>`,
+    <div class=container-fluid>
+                
+                    <div class="row row-col-auto ">
+                        <div class="col">
+                            <div class="card h-100" style="width: 25rem; padding: 1rem;">
+                                <a href="alu-click.html"><img :src="imagePath + screen_data.path"class="img-responsive"
+                                        alt="services-1"></a>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{screen_data.title}}</h5>
+                                    <p class="card-text">
+                                        <ul>
+                                            {{screen_data.info}}
+                                        </ul>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+    `
 })
