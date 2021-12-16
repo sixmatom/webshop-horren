@@ -26,7 +26,7 @@ Vue.component('product', {
                                 <div class="card-body">
                                     <h5 class="card-title">{{screen_data.title}}</h5>
                                     <p class="card-text">
-                                        <ul>
+                                        <ul v-html="screen_data.info">
                                             {{screen_data.info}}
                                         </ul>
                                     </p>
