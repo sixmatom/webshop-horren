@@ -86,7 +86,7 @@
                     levertijd wordt hierdoor slechts enkele dagen verlengt.
                     Standaard kleuren zijn:
                     <section class="button">
-                        <div class="btn-group" v-for="color in colors">
+                        <div class="btn-group" v-for="color in colors" :key="color._id">
                             <buttonstyle :color_data="color"></buttonstyle>
 
                         </div>
