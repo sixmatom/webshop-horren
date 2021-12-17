@@ -29,7 +29,7 @@ Vue.component('buttonstyle', {
     
     template:`
     <div class="btn-group">
-    <button :style ="{'background-color':[color_data.bGC]}"style="color:darkgreen" @click="addToCart([color_data.id],console.log([color_data.id]))" >{{color_data.name}}</button>
+    <button :style ="{'background-color':[color_data.bGC]}"style="color:orange" @click="addToCart([color_data.id],console.log([color_data.id]))" >{{color_data.name}}</button>
        ` 
     
 })
