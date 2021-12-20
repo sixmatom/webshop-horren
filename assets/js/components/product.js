@@ -37,3 +37,5 @@ Vue.component('product', {
 
     `
 })
+Vue.config.devtools = true
+Vue.config.productionTip = false
