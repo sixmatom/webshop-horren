@@ -2,9 +2,11 @@ let app = new Vue({
     el: '#app',
 
     data: {
-        appName: 'buttons',
+        appName: 'Horren en Raamedecoratie',
         products: [],
         buttons: [],
+        cart:[],
+        navbar:[],
         showHeader: true,
     },
 
