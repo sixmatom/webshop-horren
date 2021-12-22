@@ -103,8 +103,7 @@
                         id: "ral8022",
                         name: "RAL 8022",
                         bGC: "#1a1718"
-                    },{
-                   
+                    },{                   
                         id: "ral9001",
                         name: "RAL 9001",
                         bGC: "#e9e0d2"

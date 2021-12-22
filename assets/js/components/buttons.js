@@ -1,32 +1,44 @@
 Vue.component('buttonstyle', {
     data: function () {
         return {
-            
+            color_data: colors,
         }
+         
     },
 
     props: {
-        color_data: {},
+        
         
     },
 
     methods: {
         addToCart(id) {
             this.$root.$emit('add-to-cart', id)
-        }
-    },
+        },
+        calcTextColor(hexcolor){
+            hexcolor = hexcolor.replace("#", "");
+            var r = parseInt(hexcolor.substr(0,2),16);
+            var g = parseInt(hexcolor.substr(2,2),16);
+            var b = parseInt(hexcolor.substr(4,2),16);
+            var yiq = ((r*299)+(g*587)+(b*114))/1000;
+            return (yiq >= 128) ? 'black' : 'white';
+        
+          
+        },
+       
+        
+        },
+    
     
     template:`
-    <div class="btn-group">
-    <button :style ="{'background-color':[color_data.bGC]}"style="color:darkgreen" @click="addToCart([color_data.id],console.log([color_data.id]))" >{{color_data.name}}</button>
-        
-    </div>
-    <div class="card">
-    <img :src="imagePath + screen_data.path" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{ screen_data.name }}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        
-    </div>
-</div>`,
+    <div class="btn-group">    
+        <div v-for="color in color_data">
+            <button :style="{'background-color': color.bGC, 'color': calcTextColor(color.bGC)}" @click="addToCart(color.id)" > {{color.name}} 
+            </button>
+        </div>
+    </div>   
+    ` 
+    
 })
+Vue.config.devtools = true
+Vue.config.productionTip = false

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/cart.css">
     <script src="/node_modules/vue/dist/vue.min.js"></script>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,6 +16,7 @@
     <script src="assets/js/components/buttons.js"></script>
     <script src="/assets/js/components/product.js"></script>
     <script src="/assets/js/components/cart.js"></script>
+    <script src="/assets/js/components/navbar.js"></script>
 
 
 </head>
@@ -25,143 +28,63 @@
             <header>
                 <div class="row m-0">
                     <div class="col-md-3"></div>
-                    <div class="col-md-6 text-center pt-5">
-                        <!-- <h1>{{ appName }}</h1> -->
-                    </div>
                     <div class="col-md-3 text-end pt-5">
                         <i class="bi bi-cart4 basket" style="font-size: 2em;" @click="showCart"></i>
                     </div>
                 </div>
             </header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <div class="container-fluid ">
-                    <a class="navbar-brand" href="index.html">Horren en raamdecoratie </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"> </span>
-                    </button>
-                    <div class="col-1lapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Raamdecoratie</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Prijzen</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="horren.html">Horren</a>
-                            </li>
-
-                        </ul>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-basket" viewBox="0 0 16 16">
-                            <path
-                                d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H4zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z" />
-                        </svg>
-                    </div>
-                </div>
-
-            </nav>
+            <tom-nav-bar></tom-nav-bar>
             <div class=container>
                 <h1>ALU-CLICK</h1>
                 <p class="text-justify"> Novatrade levert de alu-click uit eigen productie.
                     De alu-click van Novatrade is geschikt voor nagenoeg alle naar binnendraaiende aluminium ramen. Met
-                    het
-                    alu-click
-                    systeem hangt de hor met 0.3mm dikke roestvaste verenstalen clips aan het kozijn.</p>
+                    het alu-click systeem hangt de hor met 0.3mm dikke roestvaste verenstalen clips aan het kozijn.</p>
 
                 <p class="text-justify">
                     <h4>Klemhor voor aluminium ramen</h4>
                     Het grote voordeel van de Novatrade alu-click is dat deze gemonteerd kan worden zonder te boren of
-                    te
-                    schroeven.
-                    De
-                    hor
-                    kan eenvoudigweg in het geopende raam geplaatst worden waarna het raam in elke stand te gebruiken
-                    is.
-                    Theoretisch
-                    kan de
-                    hor altijd gemonteerd blijven, maar Novatrade beveelt aan om de alu-click in de winter op te bergen.
+                    te schroeven. De hor kan eenvoudigweg in het geopende raam geplaatst worden waarna het raam in elke
+                    stand te gebruiken is. Theoretisch kan de hor altijd gemonteerd blijven, maar Novatrade beveelt aan
+                    om de alu-click in de winter op te bergen.
                 </p>
                 <p class="text-justify">
                     <h4> Profielen</h4>
                     De alu-click valt het minst op wanneer het aluminium kader gecoat is in de zelfde kleur als het
-                    kozijn.
-                    De
-                    meest
-                    gebruikte kleuren (14 kleuren) heeft Novatrade voor het standaard alu-click profiel op voorraad.
-                    Naast
-                    de
-                    standaard
-                    kleuren kan Novatrade de alu-click in alle RAL kleuren leveren, de levertijd wordt hierdoor slechts
-                    enkele
-                    dagen
-                    verlengt.
-
+                    kozijn. De meest gebruikte kleuren (14 kleuren) heeft Novatrade voor het standaard alu-click profiel
+                    op voorraad. Naast de standaard kleuren kan Novatrade de alu-click in alle RAL kleuren leveren, de
+                    levertijd wordt hierdoor slechts enkele dagen verlengt.
                     Standaard kleuren zijn:
                     <section class="button">
-                        <div class="btn-group" v-for="color in colors">
-                            <buttonstyle :color_data="color"></buttonstyle>
-
-                        </div>
-
+                        <buttonstyle></buttonstyle>
                     </section>
                 </p>
                 <p class="text-justify">
                     <h4>Gaas</h4>
                     Het standaard gaas wat toegepast wordt in de alu-click is gemaakt van sterk glasvezel met om elk
-                    draadje
-                    een
-                    laagje
-                    PVC.
-                    Met een maaswijdte van 1.8x1.6 mm is er een balans tussen maximale ventilatie en insecten werend,
-                    zelfs
-                    voor
-                    de
-                    kleinste
-                    beestjes. Novatrade levert de alu-click standaard met grijs gaas. Naast het standaard gaas kan
-                    Novatrade
-                    de
-                    alu-click
-                    voorzien van extra fijn gaas, pollenwerend gaas en petscreen.
+                    draadje een laagje PVC. Met een maaswijdte van 1.8x1.6 mm is er een balans tussen maximale
+                    ventilatie en insecten werend, zelfs voor de kleinste beestjes. Novatrade levert de alu-click
+                    standaard met grijs gaas. Naast het standaard gaas kan Novatrade de alu-click voorzien van extra
+                    fijn gaas, pollenwerend gaas en petscreen.
                 </p>
 
                 <p class="text-justify">
                     <h4>Afmetingen</h4>
                     Novatrade kan de alu-click op maat maken voor nagenoeg elke afmeting draai- valraam. Ook is het
-                    systeem
-                    geschikt
-                    voor
-                    veel valramen. Standaard wordt er een tussenstijl toegepast. Hierdoor blijven de profielen recht bij
-                    het
-                    strakgetrokken
-                    gaas. Op verzoek kan de tussenstijl achterwege gelaten worden, u dient dan wel rekening te houden
-                    met de
-                    technische
-                    gevolgen.
+                    systeem geschikt voor veel valramen. Standaard wordt er een tussenstijl toegepast. Hierdoor blijven
+                    de profielen recht bij het strakgetrokken gaas. Op verzoek kan de tussenstijl achterwege gelaten
+                    worden, u dient dan wel rekening te houden met de technische gevolgen.
                 </p>
 
                 <p class="text-justify">
                     <h4>Monteren</h4>
                     Voor montage heeft u geen gereedschap nodig. De alu-click van Novatrade wordt gemonteerd zonder
-                    boren of
-                    schroeven.
-                    Door
-                    het draaideel geheel te openen (in de draaistand) kunt u de alu-click, eerst met de bovenzijde aan
-                    de
-                    dorpel van
-                    het
-                    kozijn haken. Daarna laat u de hor met de verenstalen clips over de onderdorpel zakken.
-
-                    Klem van hor voor aluminium ramen
+                    boren of schroeven. Door het draaideel geheel te openen (in de draaistand) kunt u de alu-click,
+                    eerst met de bovenzijde aan de dorpel van het kozijn haken. Daarna laat u de hor met de verenstalen
+                    clips over de onderdorpel zakken. Klem van hor voor aluminium ramen
                 </p>
             </div>
     </main>
     <script src="assets/js/app.js"></script>
-    <link rel="stylesheet" href="/assets/css/styles.css">
 
 
 </body>
