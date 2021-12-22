@@ -1,5 +1,5 @@
 .cart {
-    background-color: rgb(252 252 252);
+    background-color: rgb(233, 14, 14);
     position: fixed;
     top: 0;
     height: 100%;
@@ -9,7 +9,6 @@
     right: 0;
     float: right;
     display: none;
-    padding-top: 50px
 }
 
 .basket {

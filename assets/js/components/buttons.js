@@ -1,13 +1,13 @@
 Vue.component('buttonstyle', {
     data: function () {
         return {
-            
+            color_data: colors,
         }
          
     },
 
     props: {
-        color_data: {},
+        
         
     },
 
@@ -31,8 +31,11 @@ Vue.component('buttonstyle', {
     
     
     template:`
-    <div class="btn-group">
-    <button :style ="{'background-color':[color_data.bGC], 'color': calcTextColor(color_data.bGC)}" @click="addToCart([color_data.id],console.log([color_data.id]))" >{{color_data.name}}</button>
+    <div class="btn-group">    
+        <div v-for="color in color_data">
+            <button :style="{'background-color': color.bGC, 'color': calcTextColor(color.bGC)}" @click="addToCart(color.id)" > {{color.name}} 
+            </button>
+        </div>
     </div>   
     ` 
     

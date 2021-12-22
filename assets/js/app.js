@@ -16,18 +16,30 @@ let app = new Vue({
         })
     },
 
-    methods: {
-        updateCart(id) {
-            this.products.push(id)
-        },
-        showCart() {
-            $('.layer').fadeIn();
+    methods:{
+    
+    updateCart(id) {
+        this.shoppingCart.push(id);
 
-            $('.cart').toggle({
-                direction: 'right',
-            });
-        }
+        this.$refs.cartComponent.updateShoppingCart('testje');
+    },
+
+    showCart() {
+        $('.layer').fadeIn();
+
+        $('.cart').toggle({
+            direction: 'right',
+        });
+    },
+
+    fadeOutShoppingCart() {
+        this.$refs.cartComponent.closeShoppingCart();
+    },
+
+    landingPage() {
+
     }
+}
 })
 
 Vue.config.devtools = true
